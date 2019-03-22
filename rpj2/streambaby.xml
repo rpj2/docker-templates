@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/rpj2/docker-templates/master/rpj2/streambaby.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>MediaServer:Video</Category>
+  <Name>rpj2-streambaby</Name>
+  <Description>A TiVo HME application for streaming videos</Description>
+  <Overview>* Random access streaming of MP4 & MPG video files. Able to seek to anywhere in the video. Also removes need for qt-faststart. 
+* Ability to FF/RWD to points in the video that have not been buffered yet. When outside of the buffer, a "preview" of the movie (low-quality static images) will appear, and when play is pressed the video stream will be repositioned to start streaming at that point (ala Netflix/TiVo) 
+* Ability to transcode and stream video that is not inherently TiVo compatible. Supports most files that TiVo and/or ffmpeg can handle. Preview mode and random-positioning work with most transcoded files. 
+Remembers your position in the video when you stop watching and automatically starts at that position next time you watch. Works even when exiting playing via the "TiVo" button.</Overview>
+  <Support></Support>
+  <Registry>https://registry.hub.docker.com/u/rpj2/arch-streambaby/</Registry>
+  <GitHub>https://github.com/rpj2/arch-streambaby</GitHub>
+  <Repository>rpj2/arch-streambaby</Repository>
+  <Project>https://sourceforge.net/projects/streambaby/</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7290</HostPort>
+        <ContainerPort>7290</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/rpj2-streambaby</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/rpj2-streambaby/streambaby.ini</HostDir>
+      <ContainerDir>/streambaby-0.54/streambaby.ini</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <ExtraParams></ExtraParams>
+</Containers>
