@@ -10,7 +10,7 @@
 * Ability to transcode and stream video that is not inherently TiVo compatible. Supports most files that TiVo and/or ffmpeg can handle. Preview mode and random-positioning work with most transcoded files. 
 Remembers your position in the video when you stop watching and automatically starts at that position next time you watch. Works even when exiting playing via the "TiVo" button.</Overview>
   <Support></Support>
-  <Registry>https://registry.hub.docker.com/u/rpj2/arch-streambaby/</Registry>
+  <Registry>https://cloud.docker.com/u/rpj2/repository/docker/rpj2/arch-streambaby</Registry>
   <GitHub>https://github.com/rpj2/arch-streambaby</GitHub>
   <Repository>rpj2/arch-streambaby</Repository>
   <Project>https://sourceforge.net/projects/streambaby/</Project>
@@ -49,11 +49,6 @@ Remembers your position in the video when you stop watching and automatically st
     <Volume>
       <HostDir>/mnt/user</HostDir>
       <ContainerDir>/media</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/cache/appdata/rpj2-streambaby/streambaby.ini</HostDir>
-      <ContainerDir>/streambaby-0.54/streambaby.ini</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
