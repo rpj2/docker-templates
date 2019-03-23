@@ -47,6 +47,11 @@ Remembers your position in the video when you stop watching and automatically st
       <Mode>rw</Mode>
     </Volume>
     <Volume>
+      <HostDir>/mnt/cache/appdata/data/streambaby/cache</HostDir>
+      <Container>/cache</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
       <HostDir>/mnt/user</HostDir>
       <ContainerDir>/media</ContainerDir>
       <Mode>rw</Mode>
