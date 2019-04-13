@@ -5,7 +5,7 @@
   <Category>MediaServer:Video</Category>
   <Name>rpj2-streambaby</Name>
   <Description>A TiVo HME application for streaming videos</Description>
-  <Overview>* Random access streaming of MP4 & MPG video files. Able to seek to anywhere in the video. Also removes need for qt-faststart. 
+  <Overview>* Random access streaming of MP4 &amp; MPG video files. Able to seek to anywhere in the video. Also removes need for qt-faststart. 
 * Ability to FF/RWD to points in the video that have not been buffered yet. When outside of the buffer, a "preview" of the movie (low-quality static images) will appear, and when play is pressed the video stream will be repositioned to start streaming at that point (ala Netflix/TiVo) 
 * Ability to transcode and stream video that is not inherently TiVo compatible. Supports most files that TiVo and/or ffmpeg can handle. Preview mode and random-positioning work with most transcoded files. 
 Remembers your position in the video when you stop watching and automatically starts at that position next time you watch. Works even when exiting playing via the "TiVo" button.</Overview>
